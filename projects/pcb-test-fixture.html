@@ -1,288 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Compact PCB test and programming fixture project by Luca Luchini">
-    <title>PCB Test Fixture | Luca Luchini</title>
-    <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compact PCB test and programming fixture project by Luca Luchini">
+  <title>PCB Test Fixture | Luca Luchini</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
-
 <body>
-
-<header>
-    <div class="container">
-        <nav>
-            <a class="name" href="../index.html">Luca Luchini</a>
-
-            <div class="nav-links">
-                <a href="../index.html#projects">Projects</a>
-                <a href="../index.html#about">About</a>
-                <a href="../index.html#contact">Contact</a>
-            </div>
-        </nav>
-    </div>
-</header>
+<header><div class="container"><nav>
+<a class="name" href="../index.html">Luca Luchini</a>
+<div class="nav-links"><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></div>
+</nav></div></header>
 
 <main>
+<section class="project-hero"><div class="container project-hero-grid">
+<div>
+<a class="back-link" href="../index.html#projects">← Back to projects</a>
+<p class="eyebrow">Mechanical Design • Manufacturing • Test Hardware</p>
+<h1>Compact PCB Test &amp; Programming Fixture</h1>
+<p class="project-lead">Designed and built a custom fixture for reliably locating a very small PCB and contacting closely spaced test points during programming and electrical testing.</p>
+<div class="project-meta">
+<div><span class="meta-label">Role</span><span>Mechanical design, CAM, machining, assembly</span></div>
+<div><span class="meta-label">Tools</span><span>SolidWorks, Fusion 360, CNC router, FDM printing</span></div>
+<div><span class="meta-label">Hardware</span><span>3D-printed components, Delrin insert, pogo pins, toggle clamps, purchased hardware</span></div>
+</div>
+</div>
+<div class="project-image-wrap tall"><img class="project-image" src="../images/test-fixture/hero.jpg" alt="Completed PCB test and programming fixture"></div>
+</div></section>
 
-    <section class="project-hero">
-        <div class="container project-hero-grid">
-            <div>
-                <a class="back-link" href="../index.html#projects">← Back to projects</a>
-                <p class="eyebrow">Mechanical Design • Manufacturing • Test Hardware</p>
-                <h1>Compact PCB Test &amp; Programming Fixture</h1>
+<section class="project-section"><div class="container project-content-grid">
+<div class="sticky-label"><p class="eyebrow">01</p><h2>The Challenge</h2></div>
+<div class="project-copy">
+<p>The fixture needed to hold a very small PCB in a repeatable position while making reliable electrical contact with a dense pattern of test points. Because the test points were closely spaced, small alignment errors at the board could translate into missed or inconsistent pogo-pin contact.</p>
+<p>The fixture also needed to be practical to assemble, service, and hand off to the test group for programming and electrical verification.</p>
+<div class="callout"><strong>Primary design problem:</strong> create repeatable board location and pogo-pin alignment while keeping the overall fixture simple enough to fabricate quickly and maintain.</div>
+<figure class="single-figure"><div class="project-image-wrap"><img class="project-image" src="../images/test-fixture/finished-fixture.jpg" alt="Finished test fixture"></div><figcaption>Completed fixture prior to handoff to the test team.</figcaption></figure>
+</div></div></section>
 
-                <p class="project-lead">
-                    Designed and built a compact fixture for reliably locating a small PCB and
-                    contacting tightly spaced test points during programming and electrical testing.
-                </p>
+<section class="project-section alt"><div class="container project-content-grid">
+<div class="sticky-label"><p class="eyebrow">02</p><h2>Fixture Design</h2></div>
+<div class="project-copy">
+<p>I designed the fixture in SolidWorks around the supplied PCB geometry and test-point locations. Purchased toggle clamps and standard hardware were used where possible, while the board interface and fixture body were custom designed.</p>
+<p>The assembly combines a rigid base, spring-supported upper structure, removable plates, and a dedicated pogo-pin interface. This let the fixture provide repeatable mechanical location while still being straightforward to assemble and service.</p>
+<div class="image-grid two">
+<figure><div class="project-image-wrap"><img class="project-image" src="../images/test-fixture/cad-overall.png" alt="Exploded SolidWorks CAD view of the test fixture"></div><figcaption>Exploded SolidWorks view showing the fixture stack-up and major components.</figcaption></figure>
+<figure><div class="project-image-wrap"><img class="project-image" src="../images/test-fixture/cad-closeup.png" alt="Close-up CAD view of Delrin insert and pogo pins"></div><figcaption>Close-up of the Delrin pogo-pin plate and dense contact pattern.</figcaption></figure>
+</div>
+</div></div></section>
 
-                <div class="project-meta">
-                    <div>
-                        <span class="meta-label">Role</span>
-                        <span>Mechanical design, CAM, machining, assembly</span>
-                    </div>
-                    <div>
-                        <span class="meta-label">Tools</span>
-                        <span>SolidWorks, Fusion 360, CNC router, FDM printing</span>
-                    </div>
-                    <div>
-                        <span class="meta-label">Hardware</span>
-                        <span>3D-printed components, Delrin insert, pogo pins, off-the-shelf hardware</span>
-                    </div>
-                </div>
-            </div>
+<section class="project-section"><div class="container project-content-grid">
+<div class="sticky-label"><p class="eyebrow">03</p><h2>Precision Delrin Insert</h2></div>
+<div class="project-copy">
+<p>The critical pogo-pin region required tighter and more repeatable geometry than I wanted to rely on from the 3D-printed components alone. I therefore designed a separate Delrin insert for the contact pattern.</p>
+<p>I programmed the insert in Fusion 360 and machined it on a CNC router. This combined the speed and flexibility of additive manufacturing for the bulk fixture with a machined component at the location where positional control mattered most.</p>
+<div class="image-grid two">
+<figure><div class="project-image-wrap"><img class="project-image" src="../images/test-fixture/fusion-toolpath.png" alt="Fusion 360 toolpath for machining the Delrin insert"></div><figcaption>Fusion 360 CAM showing drilling and machining operations for the Delrin insert.</figcaption></figure>
+<figure><div class="project-image-wrap"><img class="project-image" src="../images/test-fixture/delrin-insert.jpg" alt="Machined Delrin pogo pin insert"></div><figcaption>Finished machined Delrin insert with the dense pogo-pin hole pattern.</figcaption></figure>
+</div>
+</div></div></section>
 
-            <div class="hero-project-image project-image-wrap tall">
-                <img
-                    class="project-image"
-                    src="../images/test-fixture/hero.jpg"
-                    alt="Completed PCB test and programming fixture"
-                    onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');"
-                >
-                <div class="placeholder-label">hero.jpg — final fixture</div>
-            </div>
-        </div>
-    </section>
+<section class="project-section alt"><div class="container project-content-grid">
+<div class="sticky-label"><p class="eyebrow">04</p><h2>Assembly &amp; Wiring</h2></div>
+<div class="project-copy">
+<p>After fabricating the mechanical components, I installed the pogo-pin hardware and soldered the wiring into the holders. The completed mechanical and electrical assembly was then prepared for use by the test group.</p>
+<div class="image-grid two">
+<figure><div class="project-image-wrap"><img class="project-image" src="../images/test-fixture/assembly-wiring.jpg" alt="Pogo pin wiring during fixture assembly"></div><figcaption>Pogo-pin holders and wiring during fixture assembly.</figcaption></figure>
+<figure><div class="project-image-wrap"><img class="project-image" src="../images/test-fixture/midpluspogo.png" alt="CAD close-up of upper plate and pogo-pin interface"></div><figcaption>CAD close-up showing how the upper plate interfaces with the pogo-pin region.</figcaption></figure>
+</div>
+</div></div></section>
 
-
-    <section class="project-section">
-        <div class="container project-content-grid">
-            <div class="sticky-label">
-                <p class="eyebrow">01</p>
-                <h2>The Challenge</h2>
-            </div>
-
-            <div class="project-copy">
-                <p>
-                    The fixture needed to hold a very small PCB in a repeatable position while
-                    making reliable electrical contact with closely spaced test points. The tight
-                    geometry made a conventional fully 3D-printed locating feature impractical for
-                    the critical contact area.
-                </p>
-
-                <p>
-                    The design also needed to be practical to assemble, service, and hand off to
-                    the test team for regular use.
-                </p>
-
-                <div class="callout">
-                    <strong>Primary design problem:</strong>
-                    achieve repeatable board location and pogo-pin alignment at a scale where small
-                    positional errors could prevent reliable contact.
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="project-section alt">
-        <div class="container project-content-grid">
-            <div class="sticky-label">
-                <p class="eyebrow">02</p>
-                <h2>Fixture Design</h2>
-            </div>
-
-            <div class="project-copy">
-                <p>
-                    I designed the fixture around the existing PCB geometry and test-point locations.
-                    Off-the-shelf hardware was incorporated where possible, while custom components
-                    were created for board location, support, and pogo-pin positioning.
-                </p>
-
-                <div class="image-grid two">
-                    <figure>
-                        <div class="project-image-wrap">
-                            <img
-                                class="project-image"
-                                src="../images/test-fixture/cad-overall.png"
-                                alt="Overall CAD model of the PCB test fixture"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');"
-                            >
-                            <div class="placeholder-label">cad-overall.png</div>
-                        </div>
-                        <figcaption>Overall fixture CAD showing the mechanical layout and purchased hardware.</figcaption>
-                    </figure>
-
-                    <figure>
-                        <div class="project-image-wrap">
-                            <img
-                                class="project-image"
-                                src="../images/test-fixture/cad-closeup.png"
-                                alt="Close-up CAD view of PCB locating and pogo pin region"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');"
-                            >
-                            <div class="placeholder-label">cad-closeup.png</div>
-                        </div>
-                        <figcaption>Close-up of the critical board-locating and pogo-pin interface.</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="project-section">
-        <div class="container project-content-grid">
-            <div class="sticky-label">
-                <p class="eyebrow">03</p>
-                <h2>Precision Delrin Insert</h2>
-            </div>
-
-            <div class="project-copy">
-                <p>
-                    Because the board and test points were small and closely spaced, I used a
-                    machined Delrin insert for the critical locating region. This provided a more
-                    controlled geometry than relying on the 3D-printed fixture body alone.
-                </p>
-
-                <p>
-                    I created the CAM in Fusion 360 and machined the insert on a CNC router, then
-                    integrated it into the printed fixture assembly.
-                </p>
-
-                <div class="image-grid two">
-                    <figure>
-                        <div class="project-image-wrap">
-                            <img
-                                class="project-image"
-                                src="../images/test-fixture/fusion-toolpath.png"
-                                alt="Fusion 360 toolpath for machining the Delrin insert"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');"
-                            >
-                            <div class="placeholder-label">fusion-toolpath.png</div>
-                        </div>
-                        <figcaption>Fusion 360 CAM for the Delrin locating insert.</figcaption>
-                    </figure>
-
-                    <figure>
-                        <div class="project-image-wrap">
-                            <img
-                                class="project-image"
-                                src="../images/test-fixture/delrin-insert.jpg"
-                                alt="Machined Delrin locating insert"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');"
-                            >
-                            <div class="placeholder-label">delrin-insert.jpg</div>
-                        </div>
-                        <figcaption>Finished machined insert before final assembly.</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="project-section alt">
-        <div class="container project-content-grid">
-            <div class="sticky-label">
-                <p class="eyebrow">04</p>
-                <h2>Assembly &amp; Wiring</h2>
-            </div>
-
-            <div class="project-copy">
-                <p>
-                    After fabricating the mechanical components, I assembled the fixture and
-                    soldered the wiring into the pogo-pin holders. The completed fixture was then
-                    transferred to the test team for electrical testing and programming work.
-                </p>
-
-                <div class="image-grid two">
-                    <figure>
-                        <div class="project-image-wrap">
-                            <img
-                                class="project-image"
-                                src="../images/test-fixture/assembly-wiring.jpg"
-                                alt="Pogo pin wiring and fixture assembly"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');"
-                            >
-                            <div class="placeholder-label">assembly-wiring.jpg</div>
-                        </div>
-                        <figcaption>Pogo-pin holders and hand-soldered wiring during assembly.</figcaption>
-                    </figure>
-
-                    <figure>
-                        <div class="project-image-wrap">
-                            <img
-                                class="project-image"
-                                src="../images/test-fixture/finished-fixture.jpg"
-                                alt="Completed PCB test fixture"
-                                onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder');"
-                            >
-                            <div class="placeholder-label">finished-fixture.jpg</div>
-                        </div>
-                        <figcaption>Completed fixture prepared for use by the test team.</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="project-section">
-        <div class="container project-content-grid">
-            <div class="sticky-label">
-                <p class="eyebrow">05</p>
-                <h2>Outcome</h2>
-            </div>
-
-            <div class="project-copy">
-                <p>
-                    The finished fixture combined rapid 3D-printed fabrication with a precision
-                    machined interface where tighter control was required. The result was a complete
-                    test/programming fixture ready for use by the test group.
-                </p>
-
-                <p>
-                    This project required mechanical design, tolerance awareness, selection and
-                    integration of purchased components, additive manufacturing, CNC machining,
-                    soldering, and communication with the downstream test team.
-                </p>
-
-                <div class="skills-row">
-                    <span>SolidWorks</span>
-                    <span>Fusion 360</span>
-                    <span>CNC Machining</span>
-                    <span>FDM Printing</span>
-                    <span>DFM</span>
-                    <span>Pogo Pins</span>
-                    <span>Soldering</span>
-                    <span>Fixture Design</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
+<section class="project-section"><div class="container project-content-grid">
+<div class="sticky-label"><p class="eyebrow">05</p><h2>Outcome</h2></div>
+<div class="project-copy">
+<p>The finished fixture combined FDM-printed structure, purchased hardware, and a precision machined Delrin interface into one complete test and programming fixture.</p>
+<p>The project required mechanical design, tolerance awareness, component selection, additive manufacturing, CNC machining, soldering, and coordination with the downstream test team.</p>
+<div class="skills-row"><span>SolidWorks</span><span>Fusion 360</span><span>CNC Machining</span><span>FDM Printing</span><span>Fixture Design</span><span>Pogo Pins</span><span>Soldering</span><span>DFM</span></div>
+</div></div></section>
 </main>
 
-<footer>
-    <div class="container footer-inner">
-        <span>© 2026 Luca Luchini</span>
-        <a href="../index.html#projects">More projects →</a>
-    </div>
-</footer>
-
+<footer><div class="container footer-inner"><span>© 2026 Luca Luchini</span><a href="../index.html#projects">More projects →</a></div></footer>
 </body>
 </html>
