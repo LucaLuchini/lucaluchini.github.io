@@ -1,554 +1,469 @@
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-:root {
-    --ink: #17202b;
-    --muted: #5f6b78;
-    --line: #dfe4ea;
-    --surface: #ffffff;
-    --surface-alt: #f5f7f9;
-    --accent: #215ee7;
-    --max-width: 1120px;
-}
-
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    color: var(--ink);
-    background: var(--surface);
-    line-height: 1.65;
-}
-
-img {
-    max-width: 100%;
-}
-
-a {
-    color: inherit;
-}
-
-.container {
-    width: 90%;
-    max-width: var(--max-width);
-    margin: 0 auto;
-}
-
-.narrow {
-    max-width: 820px;
-}
-
-
-/* HEADER / NAV */
-
-header {
-    background: rgba(255, 255, 255, 0.96);
-    border-bottom: 1px solid var(--line);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(12px);
-}
-
-nav {
-    min-height: 72px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
-}
-
-nav .name {
-    font-size: 1.08rem;
-    font-weight: 750;
-    text-decoration: none;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-}
-
-nav .nav-links a {
-    color: var(--ink);
-    text-decoration: none;
-    margin-left: 30px;
-    font-size: 0.93rem;
-    font-weight: 550;
-}
-
-nav .nav-links a:hover,
-.text-link:hover,
-.back-link:hover {
-    color: var(--accent);
-}
-
-
-/* HOMEPAGE HERO */
-
-.hero {
-    padding: 125px 0 120px;
-    background: var(--surface);
-}
-
-.hero-inner {
-    max-width: 900px;
-}
-
-.eyebrow {
-    margin: 0 0 12px;
-    color: var(--accent);
-    font-size: 0.78rem;
-    font-weight: 750;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-}
-
-.hero h1,
-.project-hero h1 {
-    margin: 0;
-    letter-spacing: -0.045em;
-    line-height: 1.02;
-}
-
-.hero h1 {
-    font-size: clamp(3rem, 7vw, 5.6rem);
-}
-
-.hero h2 {
-    margin: 18px 0 0;
-    font-size: 1.45rem;
-    font-weight: 520;
-    color: var(--muted);
-}
-
-.hero-copy {
-    max-width: 720px;
-    margin: 26px 0 0;
-    font-size: 1.1rem;
-    color: var(--muted);
-}
-
-.hero-actions {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-    margin-top: 32px;
-}
-
-.button {
-    display: inline-block;
-    padding: 13px 22px;
-    background: var(--ink);
-    color: white;
-    text-decoration: none;
-    border-radius: 7px;
-    font-weight: 650;
-    transition: 0.2s;
-}
-
-.button:hover {
-    background: var(--accent);
-    transform: translateY(-2px);
-}
-
-.text-link,
-.back-link {
-    text-decoration: none;
-    font-weight: 650;
-}
-
-
-/* GENERAL SECTIONS */
-
-section {
-    padding: 92px 0;
-}
-
-#projects,
-#contact {
-    background: var(--surface-alt);
-}
-
-.section-heading {
-    margin-bottom: 36px;
-}
-
-.section-heading h2 {
-    margin: 0;
-    font-size: clamp(2rem, 4vw, 3rem);
-    letter-spacing: -0.035em;
-    line-height: 1.1;
-}
-
-
-/* HOMEPAGE PROJECT CARDS */
-
-.projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 26px;
-}
-
-.project-card {
-    min-height: 100%;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-a.project-card {
-    text-decoration: none;
-    transition: 0.2s ease;
-}
-
-a.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 18px 40px rgba(17, 24, 39, 0.09);
-}
-
-.featured-project {
-    grid-column: span 2;
-}
-
-.project-card-content {
-    padding: 28px;
-}
-
-.project-number {
-    margin: 0 0 10px;
-    color: #9aa3ad;
-    font-size: 0.8rem;
-    font-weight: 750;
-}
-
-.project-card h3 {
-    margin: 0 0 10px;
-    font-size: 1.32rem;
-    line-height: 1.25;
-}
-
-.tools {
-    margin: 0 0 18px;
-    color: var(--accent);
-    font-size: 0.82rem;
-    font-weight: 650;
-}
-
-.project-card p:not(.project-number):not(.tools) {
-    color: var(--muted);
-}
-
-.card-link {
-    display: inline-block;
-    margin-top: 6px;
-    font-weight: 700;
-}
-
-
-/* IMAGES */
-
-.project-image-wrap {
-    position: relative;
-    min-height: 260px;
-    background: #e9edf2;
-    overflow: hidden;
-}
-
-.project-image-wrap.tall {
-    min-height: 520px;
-}
-
-.project-image {
-    width: 100%;
-    height: 100%;
-    min-height: inherit;
-    display: block;
-    object-fit: cover;
-}
-
-/* Technical images should show the whole image */
-.image-grid .project-image {
-    object-fit: contain;
-    background: white;
-}
-
-/* Hide filename / placeholder labels */
-.placeholder-label {
-    display: none !important;
-}
-
-
-/* ABOUT */
-
-.large-copy {
-    margin: 0;
-    font-size: 1.2rem;
-    color: var(--muted);
-}
-
-
-/* FOOTER */
-
-footer {
-    background: var(--surface);
-    border-top: 1px solid var(--line);
-    padding: 34px 0;
-    color: #7a8490;
-    font-size: 0.88rem;
-}
-
-.footer-inner {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.footer-inner a {
-    text-decoration: none;
-}
-
-
-/* PROJECT PAGE */
-
-.project-hero {
-    padding: 90px 0 80px;
-}
-
-.project-hero-grid {
-    display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: 64px;
-    align-items: center;
-}
-
-.back-link {
-    display: inline-block;
-    margin-bottom: 42px;
-    color: var(--muted);
-    font-size: 0.9rem;
-}
-
-.project-hero h1 {
-    font-size: clamp(3rem, 6vw, 5rem);
-}
-
-.project-lead {
-    max-width: 720px;
-    margin: 28px 0 0;
-    color: var(--muted);
-    font-size: 1.17rem;
-}
-
-.project-meta {
-    display: grid;
-    gap: 16px;
-    margin-top: 36px;
-    padding-top: 28px;
-    border-top: 1px solid var(--line);
-}
-
-.project-meta > div {
-    display: grid;
-    grid-template-columns: 95px 1fr;
-    gap: 15px;
-}
-
-.meta-label {
-    color: #8b95a1;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-}
-
-
-/* PROJECT SECTIONS */
-
-.project-section {
-    padding: 100px 0;
-    border-top: 1px solid var(--line);
-}
-
-.project-section.alt {
-    background: var(--surface-alt);
-}
-
-.project-content-grid {
-    display: grid;
-    grid-template-columns: 260px minmax(0, 1fr);
-    gap: 80px;
-}
-
-.sticky-label {
-    align-self: start;
-    position: sticky;
-    top: 110px;
-}
-
-.sticky-label h2 {
-    margin: 0;
-    font-size: 2rem;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-}
-
-.project-copy {
-    max-width: 780px;
-}
-
-.project-copy > p {
-    margin-top: 0;
-    margin-bottom: 24px;
-    color: var(--muted);
-    font-size: 1.08rem;
-}
-
-
-/* CALLOUT */
-
-.callout {
-    margin: 36px 0;
-    padding: 24px 26px;
-    border-left: 4px solid var(--accent);
-    background: var(--surface-alt);
-    color: var(--muted);
-}
-
-
-/* PROJECT IMAGE GRIDS */
-
-.image-grid {
-    display: grid;
-    gap: 22px;
-    margin-top: 42px;
-}
-
-.image-grid.two {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.single-figure {
-    margin-top: 42px;
-}
-
-figure {
-    margin: 0;
-}
-
-figure .project-image-wrap {
-    min-height: 290px;
-    border-radius: 10px;
-    border: 1px solid var(--line);
-}
-
-.single-figure .project-image-wrap {
-    min-height: 420px;
-}
-
-figcaption {
-    margin-top: 10px;
-    color: #7a8490;
-    font-size: 0.85rem;
-}
-
-
-/* SKILLS */
-
-.skills-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 36px;
-}
-
-.skills-row span {
-    padding: 8px 12px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    background: var(--surface);
-    font-size: 0.82rem;
-    font-weight: 650;
-}
-
-
-/* TABLET */
-
-@media (max-width: 900px) {
-
-    .projects {
-        grid-template-columns: 1fr;
-    }
-
-    .featured-project {
-        grid-column: auto;
-    }
-
-    .project-hero-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-image-wrap.tall {
-        min-height: 420px;
-    }
-
-    .project-content-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .sticky-label {
-        position: static;
-    }
-}
-
-
-/* MOBILE */
-
-@media (max-width: 650px) {
-
-    .hero {
-        padding: 90px 0 85px;
-    }
-
-    section,
-    .project-section {
-        padding: 72px 0;
-    }
-
-    nav {
-        min-height: 66px;
-    }
-
-    nav .nav-links a {
-        margin-left: 16px;
-        font-size: 0.86rem;
-    }
-
-    .hero-actions {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .image-grid.two {
-        grid-template-columns: 1fr;
-    }
-
-    .project-meta > div {
-        grid-template-columns: 1fr;
-        gap: 3px;
-    }
-
-    .project-image-wrap.tall {
-        min-height: 320px;
-    }
-
-    .footer-inner {
-        flex-direction: column;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compact PCB test and programming fixture project by Luca Luchini">
+
+    <title>PCB Test Fixture | Luca Luchini</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <a class="name" href="../index.html">Luca Luchini</a>
+
+            <div class="nav-links">
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+
+    <section class="project-hero">
+        <div class="container project-hero-grid">
+
+            <div>
+
+                <a class="back-link" href="../index.html#projects">
+                    ← Back to projects
+                </a>
+
+                <p class="eyebrow">
+                    Mechanical Design • Manufacturing • Test Hardware
+                </p>
+
+                <h1>
+                    Compact PCB Test &amp; Programming Fixture
+                </h1>
+
+                <p class="project-lead">
+                    Designed and built a custom fixture for accurately locating
+                    a small production PCB and reliably contacting densely spaced
+                    test points during programming and electrical testing.
+                </p>
+
+
+                <div class="project-meta">
+
+                    <div>
+                        <span class="meta-label">Role</span>
+                        <span>
+                            Mechanical design, CAM, machining,
+                            fabrication, assembly
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="meta-label">Tools</span>
+                        <span>
+                            SolidWorks, Fusion 360, CNC router, FDM printing
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="meta-label">Hardware</span>
+                        <span>
+                            Delrin insert, pogo pins, toggle clamps,
+                            3D-printed components, purchased hardware
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-image-wrap tall">
+
+                <img
+                    class="project-image"
+                    src="../images/test-fixture/hero.jpg"
+                    alt="Completed PCB test and programming fixture"
+                >
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="project-section">
+
+        <div class="container project-content-grid">
+
+            <div class="sticky-label">
+
+                <p class="eyebrow">01</p>
+
+                <h2>The Challenge</h2>
+
+            </div>
+
+
+            <div class="project-copy">
+
+                <p>
+                    The fixture needed to repeatedly position a very small PCB
+                    while establishing reliable electrical contact with a dense
+                    group of test points.
+                </p>
+
+                <p>
+                    Because the test points were closely spaced, even small
+                    positional errors could cause pogo pins to miss their intended
+                    locations or make inconsistent contact.
+                </p>
+
+                <p>
+                    The design also needed to be practical to manufacture,
+                    assemble, service, and hand off to the test group for routine use.
+                </p>
+
+
+                <div class="callout">
+
+                    <strong>Primary design challenge:</strong>
+
+                    maintain repeatable PCB location and pogo-pin alignment while
+                    keeping the fixture simple, manufacturable, and serviceable.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="project-section alt">
+
+        <div class="container project-content-grid">
+
+            <div class="sticky-label">
+
+                <p class="eyebrow">02</p>
+
+                <h2>Fixture Design</h2>
+
+            </div>
+
+
+            <div class="project-copy">
+
+                <p>
+                    I designed the fixture in SolidWorks using the supplied PCB
+                    geometry and test-point locations as the basis for the mechanical
+                    interface.
+                </p>
+
+                <p>
+                    Off-the-shelf components were used where practical, including
+                    toggle clamps and standard hardware, while the board interface,
+                    fixture body, spring-supported structure, and locating components
+                    were custom designed.
+                </p>
+
+                <p>
+                    This approach reduced unnecessary custom fabrication while still
+                    allowing the critical geometry around the PCB to be controlled.
+                </p>
+
+
+                <div class="image-grid two">
+
+                    <figure>
+
+                        <div class="project-image-wrap">
+
+                            <img
+                                class="project-image"
+                                src="../images/test-fixture/cad-overall.png"
+                                alt="Exploded CAD view of the PCB test fixture"
+                            >
+
+                        </div>
+
+                        <figcaption>
+                            Exploded SolidWorks view showing the fixture stack-up,
+                            clamping hardware, locating components, and pogo-pin assembly.
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure>
+
+                        <div class="project-image-wrap">
+
+                            <img
+                                class="project-image"
+                                src="../images/test-fixture/cad-closeup.png"
+                                alt="Close-up CAD view of Delrin insert and pogo pins"
+                            >
+
+                        </div>
+
+                        <figcaption>
+                            Close-up of the pogo-pin interface and machined Delrin insert.
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="project-section">
+
+        <div class="container project-content-grid">
+
+            <div class="sticky-label">
+
+                <p class="eyebrow">03</p>
+
+                <h2>Precision Delrin Insert</h2>
+
+            </div>
+
+
+            <div class="project-copy">
+
+                <p>
+                    Because the PCB test points were densely spaced, positional
+                    accuracy at the pogo-pin interface was critical.
+                </p>
+
+                <p>
+                    Rather than relying on FDM tolerances for this region, I designed
+                    a separate Delrin insert and CNC-machined the pogo-pin pattern.
+                </p>
+
+                <p>
+                    This allowed the bulk of the fixture to be manufactured quickly
+                    using 3D printing while reserving CNC machining for the area where
+                    tighter positional control was required.
+                </p>
+
+                <p>
+                    I generated the CAM in Fusion 360 and machined the insert on a
+                    CNC router before integrating it into the final assembly.
+                </p>
+
+
+                <div class="image-grid two">
+
+                    <figure>
+
+                        <div class="project-image-wrap">
+
+                            <img
+                                class="project-image"
+                                src="../images/test-fixture/fusion-toolpath.png"
+                                alt="Fusion 360 toolpath for Delrin insert"
+                            >
+
+                        </div>
+
+                        <figcaption>
+                            Fusion 360 CAM used to machine the Delrin pogo-pin insert.
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure>
+
+                        <div class="project-image-wrap">
+
+                            <img
+                                class="project-image"
+                                src="../images/test-fixture/delrin-insert.jpg"
+                                alt="Machined Delrin pogo pin insert"
+                            >
+
+                        </div>
+
+                        <figcaption>
+                            Finished Delrin insert showing the machined pogo-pin pattern.
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="project-section alt">
+
+        <div class="container project-content-grid">
+
+            <div class="sticky-label">
+
+                <p class="eyebrow">04</p>
+
+                <h2>Assembly &amp; Wiring</h2>
+
+            </div>
+
+
+            <div class="project-copy">
+
+                <p>
+                    After fabricating the mechanical components, I installed the
+                    pogo-pin hardware and assembled the fixture.
+                </p>
+
+                <p>
+                    I soldered the wiring into the pogo-pin holders and routed the
+                    connections so the completed fixture could be integrated with
+                    the electrical test and programming setup.
+                </p>
+
+                <p>
+                    The completed fixture was then transferred to the test group
+                    for programming and electrical verification.
+                </p>
+
+
+                <div class="image-grid two">
+
+                    <figure>
+
+                        <div class="project-image-wrap">
+
+                            <img
+                                class="project-image"
+                                src="../images/test-fixture/assembly-wiring.jpg"
+                                alt="Pogo-pin wiring during fixture assembly"
+                            >
+
+                        </div>
+
+                        <figcaption>
+                            Pogo-pin holders and hand-soldered wiring during assembly.
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure>
+
+                        <div class="project-image-wrap">
+
+                            <img
+                                class="project-image"
+                                src="../images/test-fixture/finished-fixture.jpg"
+                                alt="Completed PCB test fixture"
+                            >
+
+                        </div>
+
+                        <figcaption>
+                            Completed fixture prepared for use by the test team.
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="project-section">
+
+        <div class="container project-content-grid">
+
+            <div class="sticky-label">
+
+                <p class="eyebrow">05</p>
+
+                <h2>Outcome</h2>
+
+            </div>
+
+
+            <div class="project-copy">
+
+                <p>
+                    The final fixture combined FDM-printed structural components,
+                    purchased hardware, toggle clamps, pogo pins, and a precision
+                    machined Delrin interface into a complete test and programming fixture.
+                </p>
+
+                <p>
+                    The project required mechanical design, tolerance awareness,
+                    component selection, additive manufacturing, CNC machining,
+                    soldering, assembly, and coordination with the downstream test team.
+                </p>
+
+
+                <div class="skills-row">
+
+                    <span>SolidWorks</span>
+                    <span>Fusion 360</span>
+                    <span>CNC Machining</span>
+                    <span>FDM Printing</span>
+                    <span>Fixture Design</span>
+                    <span>DFM</span>
+                    <span>Pogo Pins</span>
+                    <span>Soldering</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <span>© 2026 Luca Luchini</span>
+
+        <a href="../index.html#projects">
+            More projects →
+        </a>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
