@@ -335,7 +335,7 @@ footer {
 }
 
 .project-hero h1 {
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(2.6rem, 5vw, 4.3rem);
 }
 
 .project-lead {
