@@ -572,4 +572,19 @@ figcaption {
         flex-direction: column;
         gap: 10px;
     }
+    .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.contact-links a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.contact-links a:hover {
+    color: var(--accent);
+}
 }
