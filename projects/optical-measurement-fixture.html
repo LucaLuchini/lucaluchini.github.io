@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optical Measurement Fixture | Luca Luchini</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <a class="name" href="../index.html">Luca Luchini | Engineering Portfolio</a>
+            <div class="nav-links">
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section class="project-hero">
+    <div class="container project-hero-grid">
+        <div>
+            <a class="back-link" href="../index.html#projects">← Back to projects</a>
+            <p class="eyebrow">Fixture Design • Metrology • Process Improvement</p>
+            <h1>Modular Fixture System for Optical Measurement</h1>
+            <p class="project-lead">
+                Designed a modular fixture system for repeatable positioning of small
+                electronic assemblies on an optical measurement system while reducing
+                board-change downtime between scans.
+            </p>
+
+            <div class="project-meta">
+                <div><span class="meta-label">Role</span><span>Mechanical design, machining, prototyping, process improvement</span></div>
+                <div><span class="meta-label">Tools</span><span>SolidWorks, Fusion 360, CNC router, FDM printing</span></div>
+                <div><span class="meta-label">Result</span><span>Approx. 20 s → 5 s changeover downtime</span></div>
+            </div>
+        </div>
+
+        <div class="hero-image-stack">
+            <figure>
+                <div class="project-image-wrap hero-stack-image hero-tech-image">
+                    <img class="project-image" src="../images/optical-fixture/cad-assembled.png" alt="Assembled SolidWorks CAD of modular optical measurement fixture">
+                </div>
+                <figcaption>Assembled CAD view of the modular fixture system.</figcaption>
+            </figure>
+
+            <figure>
+                <div class="project-image-wrap hero-stack-image hero-tech-image">
+                    <img class="project-image" src="../images/optical-fixture/cad-exploded.png" alt="Exploded SolidWorks CAD of modular optical measurement fixture">
+                </div>
+                <figcaption>Exploded CAD view showing the board fixture and machine-side locating base.</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section class="project-section">
+    <div class="container project-content-grid">
+        <div class="sticky-label">
+            <p class="eyebrow">01</p>
+            <h2>Problem</h2>
+        </div>
+        <div class="project-copy">
+            <p>
+                Small electronic assemblies were being inspected on an optical measurement system.
+                Between scans, the operator had to remove the previous board, load the next one,
+                and reposition the fixture before the next measurement cycle could begin.
+            </p>
+            <p>
+                The changeover created roughly 20 seconds of machine downtime per board.
+                The goal was to reduce that handling time while maintaining repeatable fixture
+                positioning between scans.
+            </p>
+            <div class="callout">
+                <strong>Target:</strong> reduce loading downtime while maintaining repeatable positioning on the measurement stage.
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="project-section alt">
+    <div class="container project-content-grid">
+        <div class="sticky-label">
+            <p class="eyebrow">02</p>
+            <h2>Board Fixture</h2>
+        </div>
+        <div class="project-copy">
+            <p>
+                I designed a board-specific fixture that located the small assembly while
+                keeping the measurement area unobstructed.
+            </p>
+            <p>
+                The fixture combined a 3D-printed frame with a clear machined acrylic insert,
+                allowing the part to be retained while preserving optical access through the measurement area.
+            </p>
+
+            <div class="image-grid two natural-images">
+                <figure>
+                    <div class="project-image-wrap">
+                        <img class="project-image" src="../images/optical-fixture/board-fixture.jpg" alt="Completed board-specific fixture">
+                    </div>
+                    <figcaption>Completed board-specific fixture with the electronic assembly installed.</figcaption>
+                </figure>
+                <figure>
+                    <div class="project-image-wrap">
+                        <img class="project-image" src="../images/optical-fixture/acrylic-insert.jpg" alt="Machined clear acrylic fixture insert">
+                    </div>
+                    <figcaption>CNC-machined clear acrylic insert used at the optical interface.</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="project-section">
+    <div class="container project-content-grid">
+        <div class="sticky-label">
+            <p class="eyebrow">03</p>
+            <h2>Modular Base</h2>
+        </div>
+        <div class="project-copy">
+            <p>
+                To eliminate repeated setup time, I designed a second fixture that remained
+                located on the measurement stage and accepted the smaller board-specific fixtures.
+            </p>
+            <p>
+                This created a standardized interface between the machine and multiple part-specific
+                fixtures. The next board could be prepared away from the machine, then the entire fixture
+                could be placed back into the same indexed position after the previous scan.
+            </p>
+
+            <div class="image-grid two natural-images">
+                <figure>
+                    <div class="project-image-wrap">
+                        <img class="project-image" src="../images/optical-fixture/modular-base-installed.jpg" alt="Machine-side locating base with board fixture installed">
+                    </div>
+                    <figcaption>Board fixture installed in the larger machine-side locating base.</figcaption>
+                </figure>
+                <figure>
+                    <div class="project-image-wrap">
+                        <img class="project-image" src="../images/optical-fixture/homepage-cover.jpg" alt="Machine-side base with interchangeable fixtures">
+                    </div>
+                    <figcaption>Machine-side base with multiple interchangeable board fixtures.</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="project-section alt">
+    <div class="container project-content-grid">
+        <div class="sticky-label">
+            <p class="eyebrow">04</p>
+            <h2>Manufacturing</h2>
+        </div>
+        <div class="project-copy">
+            <p>
+                The larger fixture components were produced with FDM printing, while the acrylic
+                interface was machined on a CNC router.
+            </p>
+            <p>
+                I generated the acrylic machining strategy in Fusion 360 and used separate
+                toolpaths to rough and finish the geometry while maintaining the clear optical
+                area required by the fixture.
+            </p>
+
+            <div class="image-grid two natural-images fusion-images">
+                <figure>
+                    <div class="project-image-wrap">
+                        <img class="project-image" src="../images/optical-fixture/fusion-3d-toolpath.png" alt="Fusion 360 3D machining toolpath">
+                    </div>
+                    <figcaption>Fusion 360 toolpath used to machine the acrylic fixture component.</figcaption>
+                </figure>
+                <figure>
+                    <div class="project-image-wrap">
+                        <img class="project-image" src="../images/optical-fixture/fusion-acrylic-toolpath.png" alt="Fusion 360 acrylic machining setup">
+                    </div>
+                    <figcaption>Machining setup and toolpath for the clear acrylic insert.</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="project-section">
+    <div class="container project-content-grid">
+        <div class="sticky-label">
+            <p class="eyebrow">05</p>
+            <h2>In Use</h2>
+        </div>
+        <div class="project-copy">
+            <p>
+                With the locating base fixed on the optical measurement stage, the operator can
+                remove one prepared board fixture and place the next fixture into the same position
+                with minimal adjustment.
+            </p>
+            <p>
+                Because fixtures can be staged in advance, board handling can occur while the
+                previous scan is being completed rather than during machine downtime.
+            </p>
+
+            <figure class="single-figure compact-use-figure">
+                <div class="project-image-wrap">
+                    <img class="project-image" src="../images/optical-fixture/in-use.jpg" alt="Modular fixture system installed on optical measurement system">
+                </div>
+                <figcaption>Final fixture system installed on the optical measurement system.</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section class="project-section alt">
+    <div class="container project-content-grid">
+        <div class="sticky-label">
+            <p class="eyebrow">06</p>
+            <h2>Result</h2>
+        </div>
+        <div class="project-copy">
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <span class="metric-value">~20 s</span>
+                    <span class="metric-label">Previous changeover downtime</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">~5 s</span>
+                    <span class="metric-label">Typical changeover downtime</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">~75%</span>
+                    <span class="metric-label">Downtime reduction</span>
+                </div>
+            </div>
+
+            <p>
+                The modular system reduced typical board-change downtime from roughly 20 seconds
+                to about 5 seconds while maintaining repeatable fixture positioning.
+            </p>
+            <p>
+                The project combined a part-specific locating fixture with a standardized
+                machine-side interface, allowing multiple fixtures to be staged and swapped
+                without repeating the full alignment process.
+            </p>
+
+            <div class="skills-row">
+                <span>SolidWorks</span>
+                <span>Fusion 360</span>
+                <span>CNC Machining</span>
+                <span>FDM Printing</span>
+                <span>Acrylic</span>
+                <span>Fixture Design</span>
+                <span>Metrology</span>
+                <span>Process Improvement</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container footer-inner">
+        <span>© 2026 Luca Luchini</span>
+        <a href="../index.html#projects">More projects →</a>
+    </div>
+</footer>
+
+</body>
+</html>
