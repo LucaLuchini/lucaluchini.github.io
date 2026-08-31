@@ -524,3 +524,16 @@ figure { margin: 0; }
         gap: 10px;
     }
 }
+
+
+/* CAD cover images should remain fully visible in homepage project cards. */
+.project-image-contain {
+    object-fit: contain !important;
+    background: white;
+}
+
+
+/* Keep project imagery clean and visual-first. */
+figcaption {
+    display: none !important;
+}

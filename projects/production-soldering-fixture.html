@@ -24,51 +24,62 @@
 
 <section class="project-hero">
     <div class="container project-hero-grid">
+
         <div>
             <a class="back-link" href="../index.html#projects">← Back to projects</a>
 
-            <p class="eyebrow">Fixture Design • Material Selection • Production</p>
+            <p class="eyebrow">Fixture Design • Material Selection • Production Tooling</p>
 
-            <h1>Production Soldering Fixture Redesign</h1>
+            <h1>Production Soldering Fixture Design</h1>
 
             <p class="project-lead">
-                Redesigned a production fixture used to locate a small electronic assembly
-                and its pins during soldering, replacing a previous fixture that degraded
-                under repeated exposure to soldering heat.
+                Designed a production fixture used to locate a small electronic assembly
+                and its pins during soldering after the previous tooling degraded under
+                repeated exposure to heat.
             </p>
 
             <div class="project-meta">
                 <div>
                     <span class="meta-label">Role</span>
-                    <span>Mechanical design, material selection, fixture development</span>
+                    <span>Mechanical design, material selection, prototyping, production tooling</span>
+                </div>
+
+                <div>
+                    <span class="meta-label">Tools</span>
+                    <span>SolidWorks, FDM 3D printing, engineering drawings</span>
                 </div>
 
                 <div>
                     <span class="meta-label">Materials</span>
-                    <span>Machined aluminum and G11 glass-epoxy laminate</span>
-                </div>
-
-                <div>
-                    <span class="meta-label">Purpose</span>
-                    <span>Repeatable pin location with improved thermal durability</span>
+                    <span>Machined aluminum, G11, 3D-printed locating components</span>
                 </div>
             </div>
         </div>
 
         <div class="hero-image-stack">
+
             <figure>
                 <div class="project-image-wrap hero-stack-image">
-                    <img class="project-image" src="../images/solder-fixture/finished-front.jpg" alt="Completed production soldering fixture">
+                    <img
+                        class="project-image"
+                        src="../images/solder-fixture/finished-landscape.jpg"
+                        alt="Completed aluminum, G11, and 3D-printed production soldering fixture"
+                    >
                 </div>
-                <figcaption>Completed aluminum and G11 soldering fixture.</figcaption>
+                <figcaption>Completed production soldering fixture.</figcaption>
             </figure>
 
             <figure>
                 <div class="project-image-wrap hero-stack-image hero-tech-image">
-                    <img class="project-image" src="../images/solder-fixture/cad-assembly-placeholder.png" alt="Placeholder for completed fixture CAD assembly">
+                    <img
+                        class="project-image"
+                        src="../images/solder-fixture/cad-assembled.png"
+                        alt="Assembled SolidWorks CAD of production soldering fixture"
+                    >
                 </div>
-                <figcaption>Placeholder — replace with clean SolidWorks assembly view.</figcaption>
+                <figcaption>Assembled SolidWorks model of the fixture.</figcaption>
             </figure>
+
         </div>
     </div>
 </section>
@@ -76,6 +87,7 @@
 
 <section class="project-section">
     <div class="container project-content-grid">
+
         <div class="sticky-label">
             <p class="eyebrow">01</p>
             <h2>Problem</h2>
@@ -84,92 +96,114 @@
         <div class="project-copy">
             <p>
                 The existing production fixture was repeatedly exposed to heat during
-                pin soldering and was beginning to melt and deform. Because the fixture
-                establishes the position of the board and pins, continued degradation
-                could reduce consistency and shorten the useful life of the tooling.
+                pin soldering and was beginning to melt and deform. Because the tooling
+                establishes the relationship between the board and the pins, continued
+                degradation could reduce consistency and shorten fixture life.
             </p>
 
             <p>
-                The redesign needed to preserve the locating function of the fixture
-                while using materials better suited for repeated production soldering.
+                The replacement needed to maintain reliable board and pin location,
+                remain accessible to the technician during soldering, and use materials
+                better suited to repeated production use.
             </p>
 
-            <figure class="single-figure compact-use-figure">
-                <div class="project-image-wrap">
-                    <img class="project-image" src="../images/solder-fixture/old-fixture-placeholder.png" alt="Placeholder for previous heat-damaged soldering fixture">
-                </div>
-                <figcaption>Optional placeholder — use only if the previous fixture clearly shows the failure mode.</figcaption>
-            </figure>
+            <div class="callout">
+                <strong>Design objective:</strong>
+                improve thermal durability without sacrificing locating accuracy or operator access.
+            </div>
         </div>
+
     </div>
 </section>
 
 
 <section class="project-section alt">
     <div class="container project-content-grid">
+
         <div class="sticky-label">
             <p class="eyebrow">02</p>
-            <h2>Design Approach</h2>
+            <h2>Fixture Design</h2>
         </div>
 
         <div class="project-copy">
             <p>
-                I redesigned the fixture as a rigid machined assembly with a large
-                aluminum base and smaller replaceable G11 components around the critical
-                soldering and locating region.
+                I redesigned the tooling as a multi-material assembly built around a rigid
+                machined aluminum base. Two rectangular G11 components form the fixture body
+                around the critical pin and soldering region, while the upper locating
+                components are 3D printed.
             </p>
 
             <p>
-                The fixture geometry positions the assembly and constrains the pins during
-                soldering while keeping the working area accessible to the operator.
+                The printed components locate the board onto the pins and hold it in the
+                correct position while the technician completes the soldering operation.
+                This separates the locating, thermal, and structural functions between
+                components instead of relying on a single fixture material.
             </p>
 
             <div class="image-grid two natural-images">
+
                 <figure>
                     <div class="project-image-wrap">
-                        <img class="project-image" src="../images/solder-fixture/cad-exploded-placeholder.png" alt="Placeholder for exploded CAD view">
+                        <img
+                            class="project-image"
+                            src="../images/solder-fixture/cad-assembled.png"
+                            alt="Assembled CAD view of soldering fixture"
+                        >
                     </div>
-                    <figcaption>Placeholder — exploded CAD should show the major fixture components and hardware.</figcaption>
+                    <figcaption>Assembled CAD showing the complete fixture architecture.</figcaption>
                 </figure>
 
                 <figure>
                     <div class="project-image-wrap">
-                        <img class="project-image" src="../images/solder-fixture/finished-top.jpg" alt="Top view of completed soldering fixture">
+                        <img
+                            class="project-image"
+                            src="../images/solder-fixture/cad-exploded.png"
+                            alt="Exploded CAD view of soldering fixture"
+                        >
                     </div>
-                    <figcaption>Completed fixture showing the assembled G11 components on the aluminum base.</figcaption>
+                    <figcaption>Exploded CAD showing the aluminum base, G11 components, locating hardware, and printed board holder.</figcaption>
                 </figure>
+
             </div>
         </div>
+
     </div>
 </section>
 
 
 <section class="project-section">
     <div class="container project-content-grid">
+
         <div class="sticky-label">
             <p class="eyebrow">03</p>
-            <h2>Material Selection</h2>
+            <h2>Critical Location</h2>
         </div>
 
         <div class="project-copy">
             <p>
-                Aluminum was selected for the base to provide a rigid, durable platform
-                for repeated production use. G11 glass-epoxy laminate was used for the
-                smaller fixture components surrounding the soldering interface because
-                it provides good thermal resistance and electrical insulation.
+                The central fixture geometry controls the relationship between the board
+                and the solder pins. The G11 components support the critical region, while
+                the printed upper pieces guide the board onto the pins and retain it during
+                the soldering operation.
             </p>
 
             <p>
-                Separating the fixture into an aluminum base and smaller G11 details also
-                keeps the high-temperature material concentrated where it is most useful.
+                I used the CAD assembly to verify component clearances, pin location,
+                fastener placement, and access around the soldering area before releasing
+                the machined parts.
             </p>
 
             <figure class="single-figure compact-use-figure">
                 <div class="project-image-wrap">
-                    <img class="project-image" src="../images/solder-fixture/g11-component.jpg" alt="Machined G11 soldering fixture component">
+                    <img
+                        class="project-image"
+                        src="../images/solder-fixture/cad-transparent-detail.png"
+                        alt="Transparent CAD detail showing internal soldering fixture locating features"
+                    >
                 </div>
-                <figcaption>Machined G11 component used at the critical locating and soldering interface.</figcaption>
+                <figcaption>Transparent CAD view showing the internal locating relationship around the solder pins.</figcaption>
             </figure>
+
         </div>
     </div>
 </section>
@@ -177,45 +211,61 @@
 
 <section class="project-section alt">
     <div class="container project-content-grid">
+
         <div class="sticky-label">
             <p class="eyebrow">04</p>
-            <h2>Final Fixture</h2>
+            <h2>Materials &amp; Manufacturing</h2>
         </div>
 
         <div class="project-copy">
             <p>
-                The final fixture combines the machined aluminum base, G11 locating
-                components, and mechanical hardware into a robust assembly intended for
-                repeated production use.
+                The aluminum base provides a rigid and durable foundation for repeated
+                production use. G11 glass-epoxy laminate was used for the two rectangular
+                components surrounding the soldering region because of its thermal
+                resistance and electrical-insulating properties.
             </p>
 
             <p>
-                I completed the mechanical design and had the components machined, then
-                assembled the finished fixture for production use.
+                The board-locating components were 3D printed, allowing those geometrically
+                specific pieces to be produced and revised quickly. I created the mechanical
+                design and engineering documentation, and machined components were produced
+                by outside suppliers before final assembly.
             </p>
 
             <div class="image-grid two natural-images">
+
                 <figure>
                     <div class="project-image-wrap">
-                        <img class="project-image" src="../images/solder-fixture/finished-front.jpg" alt="Front view of finished soldering fixture">
+                        <img
+                            class="project-image"
+                            src="../images/solder-fixture/g11-component.jpg"
+                            alt="Machined G11 component for soldering fixture"
+                        >
                     </div>
-                    <figcaption>Front view showing the critical pin-locating region.</figcaption>
+                    <figcaption>One of the machined G11 fixture components.</figcaption>
                 </figure>
 
                 <figure>
                     <div class="project-image-wrap">
-                        <img class="project-image" src="../images/solder-fixture/finished-top.jpg" alt="Top view of finished soldering fixture">
+                        <img
+                            class="project-image"
+                            src="../images/solder-fixture/finished-top.jpg"
+                            alt="Completed soldering fixture from above"
+                        >
                     </div>
-                    <figcaption>Top view of the completed machined assembly.</figcaption>
+                    <figcaption>Completed assembly showing the G11 fixture body installed on the aluminum base.</figcaption>
                 </figure>
+
             </div>
         </div>
+
     </div>
 </section>
 
 
 <section class="project-section">
     <div class="container project-content-grid">
+
         <div class="sticky-label">
             <p class="eyebrow">05</p>
             <h2>In Use</h2>
@@ -223,17 +273,27 @@
 
         <div class="project-copy">
             <p>
-                The fixture is intended to hold the board and pins in a repeatable position
-                while the operator completes the soldering process. A production-use photo
-                will make this function immediately clear once one is available.
+                During use, the board is positioned onto the solder pins by the lower
+                printed locator. The round upper component then locates and holds the board
+                in position while leaving the required region accessible to the technician.
+            </p>
+
+            <p>
+                The result is a repeatable setup that establishes board-to-pin position
+                before soldering while keeping the production workflow straightforward.
             </p>
 
             <figure class="single-figure compact-use-figure">
                 <div class="project-image-wrap">
-                    <img class="project-image" src="../images/solder-fixture/in-use-placeholder.png" alt="Placeholder for soldering fixture in use">
+                    <img
+                        class="project-image"
+                        src="../images/solder-fixture/in-use.jpg"
+                        alt="Production soldering fixture with electronic assembly loaded"
+                    >
                 </div>
-                <figcaption>Placeholder — replace with a photo of the fixture loaded during the soldering operation.</figcaption>
+                <figcaption>Fixture with the electronic assembly loaded in its production position.</figcaption>
             </figure>
+
         </div>
     </div>
 </section>
@@ -241,6 +301,7 @@
 
 <section class="project-section alt">
     <div class="container project-content-grid">
+
         <div class="sticky-label">
             <p class="eyebrow">06</p>
             <h2>Result</h2>
@@ -248,14 +309,16 @@
 
         <div class="project-copy">
             <p>
-                The redesign replaced the heat-sensitive fixture with a machined aluminum
-                and G11 assembly intended to withstand repeated soldering cycles while
-                maintaining the required board and pin location.
+                The redesign replaced heat-sensitive production tooling with a fixture
+                that assigns each major function to a more appropriate component:
+                aluminum for the structural base, G11 around the soldering interface,
+                and 3D-printed parts for board location and retention.
             </p>
 
             <p>
-                The project required balancing production usability, thermal durability,
-                material selection, machinability, and precise fixture geometry in a compact design.
+                The finished assembly provides repeatable board and pin positioning,
+                improved resistance to repeated soldering exposure, and straightforward
+                access for the technician during production.
             </p>
 
             <div class="skills-row">
@@ -264,10 +327,12 @@
                 <span>Material Selection</span>
                 <span>G11</span>
                 <span>Aluminum</span>
-                <span>Machined Components</span>
+                <span>3D Printing</span>
+                <span>Engineering Drawings</span>
                 <span>Production Tooling</span>
             </div>
         </div>
+
     </div>
 </section>
 
