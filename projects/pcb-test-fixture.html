@@ -15,13 +15,13 @@
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-<header><div class="container"><nav><a class="name" href="../index.html">Luca Luchini</a><div class="nav-links"><a href="../index.html#projects">Projects</a><a href="../index.html#contact">Contact</a></div></nav></div></header>
+<header><div class="container"><nav><a class="name" href="../index.html" onclick="gtag('event', 'home_click', {'page_source': 'pcb_test_fixture'});">Luca Luchini</a><div class="nav-links"><a href="../index.html#projects" onclick="gtag('event', 'projects_nav_click', {'page_source': 'pcb_test_fixture'});">Projects</a><a href="../index.html#contact" onclick="gtag('event', 'contact_nav_click', {'page_source': 'pcb_test_fixture'});">Contact</a></div></nav></div></header>
 <main>
 
 <section class="project-hero">
 <div class="container project-hero-grid">
 <div>
-<a class="back-link" href="../index.html#projects">← Back to projects</a>
+<a class="back-link" href="../index.html#projects" onclick="gtag('event', 'back_to_projects_click', {'page_source': 'pcb_test_fixture'});">← Back to projects</a>
 <p class="eyebrow">Mechanical Design • Manufacturing • Test Hardware</p>
 <h1>PCB Test &amp; Programming Fixture</h1>
 <p class="project-lead">Designed and built a custom fixture for accurately locating a small production PCB and reliably contacting densely spaced test points during programming and electrical testing.</p>
@@ -63,6 +63,6 @@
 <section class="project-section alt"><div class="container project-content-grid"><div class="sticky-label"><p class="eyebrow">06</p><h2>Result</h2></div><div class="project-copy"><p>The final fixture combined 3D-printed structural components, purchased hardware, toggle clamps, pogo pins, and a CNC-machined Delrin interface into one complete test and programming fixture.</p><p>The key design change was separating the critical pogo-pin geometry from the printed structure and manufacturing that region with a process better suited to the required positional accuracy.</p><div class="skills-row"><span>SolidWorks</span><span>Fusion 360</span><span>CNC Machining</span><span>FDM Printing</span><span>Fixture Design</span><span>DFM</span><span>Pogo Pins</span><span>Soldering</span></div></div></div></section>
 
 </main>
-<footer><div class="container footer-inner"><span>© 2026 Luca Luchini</span><a href="../index.html#projects">More projects →</a></div></footer>
+<footer><div class="container footer-inner"><span>© 2026 Luca Luchini</span><a href="../index.html#projects" onclick="gtag('event', 'more_projects_click', {'page_source': 'pcb_test_fixture'});">More projects →</a></div></footer>
 </body>
 </html>

@@ -20,10 +20,10 @@
 <header>
     <div class="container">
         <nav>
-            <a class="name" href="index.html">Luca Luchini | Engineering Portfolio</a>
+            <a class="name" href="index.html" onclick="gtag('event', 'home_click');">Luca Luchini | Engineering Portfolio</a>
             <div class="nav-links">
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <a href="#projects" onclick="gtag('event', 'projects_nav_click');">Projects</a>
+                <a href="#contact" onclick="gtag('event', 'contact_nav_click');">Contact</a>
             </div>
         </nav>
     </div>
@@ -42,8 +42,8 @@
             and hands-on assembly.
         </p>
         <div class="hero-actions">
-            <a class="button" href="#projects">View Projects</a>
-            <a class="button" href="Documents/LUCHINIRESUME.pdf" target="_blank">View Resume</a>
+            <a class="button" href="#projects" onclick="gtag('event', 'view_projects_click');">View Projects</a>
+            <a class="button" href="Documents/LUCHINIRESUME.pdf" target="_blank" onclick="gtag('event', 'resume_click', {'link_location': 'hero'});">View Resume</a>
         </div>
     </div>
 </section>
@@ -56,7 +56,7 @@
 
         <div class="projects">
 
-            <a class="project-card" href="projects/pcb-test-fixture.html">
+            <a class="project-card" href="projects/pcb-test-fixture.html" onclick="gtag('event', 'pcb_test_fixture_click');">
                 <div class="project-image-wrap">
                     <img class="project-image" src="images/test-fixture/hero.jpg" alt="Compact PCB test and programming fixture">
                 </div>
@@ -71,7 +71,7 @@
                 </div>
             </a>
 
-            <a class="project-card" href="projects/optical-measurement-fixture.html">
+            <a class="project-card" href="projects/optical-measurement-fixture.html" onclick="gtag('event', 'optical_measurement_fixture_click');">
                 <div class="project-image-wrap">
                     <img class="project-image project-image-contain" src="images/optical-fixture/cad-assembled.png" alt="CAD assembly of modular optical measurement fixture system">
                 </div>
@@ -86,7 +86,7 @@
                 </div>
             </a>
 
-            <a class="project-card" href="projects/production-soldering-fixture.html">
+            <a class="project-card" href="projects/production-soldering-fixture.html" onclick="gtag('event', 'production_soldering_fixture_click');">
                 <div class="project-image-wrap">
                     <img class="project-image" src="images/solder-fixture/finished-landscape.jpg" alt="Heat-resistant production soldering fixture">
                 </div>
@@ -115,19 +115,19 @@
     <div class="container narrow">
         <div class="section-heading"><h2>Contact</h2></div>
         <div class="contact-links">
-            <a class="contact-card" href="mailto:Lucag515@icloud.com">
+            <a class="contact-card" href="mailto:Lucag515@icloud.com" onclick="gtag('event', 'email_click');">
                 <span class="contact-label">Email</span>
                 <span class="contact-value">Lucag515@icloud.com</span>
             </a>
-            <a class="contact-card" href="https://www.linkedin.com/in/luca-luchini-402ab2226" target="_blank">
+            <a class="contact-card" href="https://www.linkedin.com/in/luca-luchini-402ab2226" target="_blank" onclick="gtag('event', 'linkedin_click');">
                 <span class="contact-label">LinkedIn</span>
                 <span class="contact-value">View Profile ↗</span>
             </a>
-            <a class="contact-card" href="https://github.com/LucaLuchini" target="_blank">
+            <a class="contact-card" href="https://github.com/LucaLuchini" target="_blank" onclick="gtag('event', 'github_click');">
                 <span class="contact-label">GitHub</span>
                 <span class="contact-value">@LucaLuchini ↗</span>
             </a>
-            <a class="contact-card" href="Documents/LUCHINIRESUME.pdf" target="_blank">
+            <a class="contact-card" href="Documents/LUCHINIRESUME.pdf" target="_blank" onclick="gtag('event', 'resume_click', {'link_location': 'contact'});">
                 <span class="contact-label">Resume</span>
                 <span class="contact-value">View PDF ↗</span>
             </a>
@@ -140,7 +140,7 @@
 <footer>
     <div class="container footer-inner">
         <span>© 2026 Luca Luchini</span>
-        <a href="#">Back to top ↑</a>
+        <a href="#" onclick="gtag('event', 'back_to_top_click');">Back to top ↑</a>
     </div>
 </footer>
 
